@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulari de dades personals</title>
+</head>
+<body>
+  <h2>Formulari</h2>
+  <form action="exercici01.php" method="POST">
+    <label>Nom: <input type="text" name="nom" required></label><br><br>
+    <label>Cognoms: <input type="text" name="cognoms" required></label><br><br>
+
+    <label>Gènere:</label><br>
+    <input type="radio" name="genere" value="Home" required> Home<br>
+    <input type="radio" name="genere" value="Dona"> Dona<br>
+    <input type="radio" name="genere" value="Altres"> Altres<br><br>
+
+    <label>Correu electrònic: <input type="email" name="email" required></label><br><br>
+    <label>Edat: <input type="number" name="edat" min="0" required></label><br><br>
+
+    <label>Ciutat:
+      <input list="ciutats" name="ciutat">
+      <datalist id="ciutats">
+        <option value="Barcelona">
+        <option value="Girona">
+        <option value="Lleida">
+        <option value="Tarragona">
+      </datalist>
+    </label><br><br>
+
+    <label>Aficions:</label><br>
+    <input type="checkbox" name="aficions[]" value="Llegir"> Llegir<br>
+    <input type="checkbox" name="aficions[]" value="Esport"> Esport<br>
+    <input type="checkbox" name="aficions[]" value="Música"> Música<br>
+    <input type="checkbox" name="aficions[]" value="Cinema"> Cinema<br><br>
+
+    <label>Motivacions personals:</label><br>
+    <textarea name="motivacions" rows="4" cols="40" placeholder="Escriu aquí..."></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
